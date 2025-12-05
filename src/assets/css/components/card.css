@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---- Components : Card : Start ---- */
+
+/* 카드 내부 Form Label 텍스트 처리 (Token으로 불가능) */
+.ant-card .ant-form-item-label {
+    overflow: visible;
+}
+
+.ant-card .ant-form-item-label > label {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 1.5;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* CardFilter의 inline 레이아웃에서 label 처리 */
+.ant-card .ant-form-inline .ant-form-item-label {
+    flex-shrink: 0;
+}
+
+.ant-card .ant-form-inline .ant-form-item-label > label {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+/* CardFilter 아이템 너비 자동 조정 */
+.ant-card .card-filter-item {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.ant-card .card-filter-item .ant-form-item-label > label {
+    max-width: none;
+}
+
+/* CardForm의 horizontal 레이아웃 label 영역 */
+.ant-card .ant-form-horizontal .ant-form-item-label {
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.ant-card .ant-form-horizontal .ant-form-item-label > label {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+/* CardForm의 vertical 레이아웃 label 처리 */
+.ant-card .ant-form-vertical .ant-form-item-label > label {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    display: block;
+    width: 100%;
+}
+
+/* ---- Components : Card : End ---- */
+

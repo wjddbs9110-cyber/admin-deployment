@@ -1,0 +1,48 @@
+---
+alwaysApply: true
+---
+
+### 6. 메뉴 구조 + Sidebar
+목표:
+메뉴 데이터 작성 + Sidebar UI 구현
+
+**꼭 참조해야 할 문서:**
+- `.cursor/rules/02-react-antd-rules.mdc`
+- `.cursor/rules/03-file-directory.mdc`
+- `.cursor/rules/04-common-structures.mdc`
+
+1. 메뉴 데이터 (AppRouterUtil.tsx)
+   - 대시보드
+   - 컴포넌트 샘플
+   - 2depth 메뉴 샘플
+   - 3depth 메뉴 샘플
+   - 각 메뉴에 key, label, path, icon 포함
+   - Ant Design Icons 사용
+
+2. Sidebar 컴포넌트
+   - AppRouterUtil.tsx의 메뉴 사용
+   - Ant Design Menu 컴포넌트 사용
+   - 접힘/펼침 토글 기능
+
+파일 구성:
+- src/router/AppRouterUtil.tsx (메뉴 데이터 포함)
+- src/layout/sidebar/Sidebar.tsx
+- src/assets/css/layout/sidebar/sidebar.css
+
+필수 규칙:
+- HTML 태그 절대 사용 금지
+- 인라인 스타일 절대 금지
+- 파일 분리 원칙
+- Typography 컴포넌트로 텍스트 표시
+
+생성 후 검증:
+- [ ] AppRouterUtil.tsx에 메뉴 데이터 포함됨
+- [ ] Sidebar 컴포넌트 생성됨
+- [ ] 메뉴 클릭 시 페이지 이동
+- [ ] HTML 태그 없음
+
+결과 확인:
+- [ ] AppRouterUtil.tsx 업데이트됨 (메뉴 데이터 포함)
+- [ ] Sidebar.tsx 생성됨
+- [ ] 메뉴가 사이드바에 표시됨
+- [ ] 클릭 시 페이지 이동 동작

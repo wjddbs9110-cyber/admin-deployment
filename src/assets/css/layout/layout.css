@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---- Layout : Start ---- */
+
+/* Token으로 불가능한 스타일만 */
+.ant-layout {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.ant-layout-content {
+    overflow-x: hidden;
+}
+
+/* ---- Layout : End ---- */
+

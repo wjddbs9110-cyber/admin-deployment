@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---- Common CSS : Start ---- */
+
+/* Ant Design CSS 오버라이드 (Token으로 불가능) */
+.ant-flex:empty {
+    display: block;
+}
+
+/* 너비 유틸리티 (Token으로 불가능) */
+.w-100 { width: 100px !important; }
+.w-200 { width: 200px !important; }
+.w-300 { width: 300px !important; }
+.w-400 { width: 400px !important; }
+.w-500 { width: 500px !important; }
+.w-full { 
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.w-auto { width: auto !important; }
+
+/* 카드 구조 공통 (Token으로 불가능) */
+.card-divider {
+    margin: 0 !important;
+}
+
+.card-filter-item {
+    margin-bottom: 0 !important;
+}
+
+/* 카드 내부 Typography 텍스트 처리 */
+.ant-card .ant-typography {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+/* 카드 헤더 타이틀 텍스트 처리 */
+.ant-card .box-header {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ant-card .box-header .ant-typography {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.ant-card .box-header > .ant-flex {
+    flex-shrink: 0;
+}
+
+/* 테이블 내부 텍스트 처리 */
+.ant-table-cell {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+/* Form Label 전역 텍스트 처리 */
+.ant-form-item-label {
+    overflow: visible;
+}
+
+.ant-form-item-label > label {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+/* 스크롤바 다크 테마 (Token으로 불가능) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1d29;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* 태그 커스텀 색상 (Token으로 불가능) */
+.ant-tag-blue {
+    background: rgba(139, 92, 246, 0.12);
+    border-color: #8b5cf6;
+    color: #a78bfa;
+}
+
+.ant-tag-success {
+    background: rgba(74, 222, 128, 0.12);
+    border-color: #4ade80;
+    color: #86efac;
+}
+
+.ant-tag-warning {
+    background: rgba(251, 191, 36, 0.12);
+    border-color: #fbbf24;
+    color: #fcd34d;
+}
+
+.ant-tag-processing {
+    background: rgba(96, 165, 250, 0.12);
+    border-color: #60a5fa;
+    color: #93c5fd;
+}
+
+.ant-tag-default {
+    background: rgba(209, 213, 219, 0.12);
+    border-color: #9ca3af;
+    color: #d1d5db;
+}
+
+/* 페이지네이션 라인 스타일 (Token으로 불가능) */
+.ant-pagination .ant-pagination-item {
+    border: 1px solid #3f3f46;
+    background: transparent;
+}
+
+.ant-pagination .ant-pagination-item:hover {
+    border-color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-item-active {
+    border-color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+    color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next {
+    border: 1px solid #3f3f46;
+}
+
+.ant-pagination .ant-pagination-prev:hover,
+.ant-pagination .ant-pagination-next:hover {
+    border-color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination .ant-pagination-next:hover .ant-pagination-item-link {
+    color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-jump-prev,
+.ant-pagination .ant-pagination-jump-next {
+    border: 1px solid #3f3f46;
+}
+
+.ant-pagination .ant-pagination-options-quick-jumper input {
+    border: 1px solid #3f3f46;
+    background: transparent;
+}
+
+.ant-pagination .ant-pagination-options-quick-jumper input:hover {
+    border-color: #8b5cf6;
+}
+
+.ant-pagination .ant-pagination-options-quick-jumper input:focus {
+    border-color: #8b5cf6;
+}
+
+/* ---- Common CSS : End ---- */
+

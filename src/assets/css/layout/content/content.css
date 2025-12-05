@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---- Layout : Content : Start ---- */
+
+/* Token으로 불가능한 스타일만 */
+.ant-layout-content {
+    padding: 24px;
+}
+
+.content-header {
+    margin-bottom: 24px;
+}
+
+.content-body {
+    flex: 1;
+    min-height: 0;
+}
+
+.content-footer {
+    margin-top: 24px;
+    padding: 16px 0;
+    border-top: 1px solid #3f3f46;
+}
+
+/* ---- Layout : Content : End ---- */
+

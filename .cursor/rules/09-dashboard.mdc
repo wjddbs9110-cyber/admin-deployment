@@ -1,0 +1,124 @@
+---
+alwaysApply: true
+---
+
+### 9. Dashboard 페이지
+
+목표:
+메인 대시보드 (공통 컴포넌트 활용)
+
+**꼭 참조해야 할 문서:**
+- `.cursor/rules/02-react-antd-rules.mdc`
+- `.cursor/rules/03-file-directory.mdc`
+- `.cursor/rules/04-common-structures.mdc`
+
+Dashboard 페이지를 생성해줘.
+Grid, Card, Statistic, CardTable를 활용합니다.
+
+구성 요소:
+1. KPI 카드 4개 (Grid 컴포넌트 사용, columns={4})
+- Card 안에 Statistic 컴포넌트
+- 각 카드에 적절한 아이콘 추가 (Ant Design Icons)
+- 총 캠페인 수 (아이콘: FundOutlined)
+- 활성 캠페인 (아이콘: RiseOutlined)
+- 총 노출수 (아이콘: EyeOutlined)
+- 평균 CTR (아이콘: PercentageOutlined)
+- 가독성 좋은 레이아웃: 아이콘과 수치를 잘 보이게 배치
+
+2. 차트 영역 (Grid 컴포넌트 사용, columns={2})
+- Recharts 라이브러리 사용 (무료 MIT 라이선스)
+- 가로 막대 차트
+- 세로 막대 차트
+- 도넛 차트
+- 부드러운 곡선 차트
+- 각 차트는 Card로 감싸기
+
+3. 최근 캠페인 테이블 (CardTable 사용)
+- 컬럼: 캠페인명, 상태(Tag), 노출수, 클릭수, CTR
+- 샘플 데이터 10개 정도
+
+페이지 구조:
+- Space direction="vertical" size={24}로 전체 감싸기
+- Grid 컴포넌트로 KPI 카드 배치 (4컬럼)
+- Grid 컴포넌트로 차트 배치 (2컬럼, 2x2 그리드)
+- Table 컴포넌트로 캠페인 목록
+
+파일 구성:
+- src/pages/dashboard/Dashboard.tsx (렌더링만)
+- src/pages/dashboard/DashboardUtil.ts (데이터, 타입)
+
+데이터 분리 (Util.ts):
+- KPI 데이터 (statsData with icons)
+- 차트 샘플 데이터 4종류
+- 테이블 컬럼 정의 (tableColumns)
+- 캠페인 샘플 데이터 (campaignData)
+
+**⚠️ 중요: JSX 구문 사용 금지**
+- `.ts` 파일에서는 JSX 구문(`<Component />`) 사용 불가
+- 아이콘은 데이터로 타입과 색상만 저장
+- 렌더링은 `.tsx` 파일에서 처리
+
+**⚠️ 중요: 인라인 스타일 최소화**
+- 고정 값(fontSize 등)은 CSS 파일로 분리
+- 동적 값(color 등)만 인라인 스타일 허용
+
+**올바른 구현 예시:**
+```typescript
+// ❌ DashboardUtil.ts - JSX 사용 금지
+export const kpiData = [
+    { title: '총 캠페인 수', icon: <FundOutlined /> }  // 오류 발생!
+];
+
+// ✅ DashboardUtil.ts - 데이터만
+export interface KpiDataItem {
+    title: string;
+    value: number;
+    iconType: 'fund' | 'rise' | 'eye' | 'percentage';
+    iconColor: string;
+}
+export const kpiData: KpiDataItem[] = [
+    { title: '총 캠페인 수', value: 248, iconType: 'fund', iconColor: '#1890ff' }
+];
+
+// ✅ Dashboard.tsx - 렌더링
+const getIcon = (item: KpiDataItem) => {
+    const iconProps = {
+        className: 'dashboard-icon',           // CSS 클래스 사용
+        style: { color: item.iconColor }       // 동적 색상만 인라인
+    };
+    switch (item.iconType) {
+        case 'fund': return <FundOutlined {...iconProps} />;
+        // ...
+    }
+};
+
+// ✅ dashboard.css - 고정 스타일
+.dashboard-icon {
+    font-size: 24px;
+}
+```
+
+패키지 설치:
+- Recharts가 없다면 설치 필요: npm install recharts
+
+필수 규칙:
+- HTML 태그 절대 사용 금지
+- 인라인 스타일 절대 금지
+- 모든 데이터는 Util.ts에 분리
+- .tsx에는 렌더링 코드만
+
+생성 후 검증:
+- [ ] KPI 카드 4개 (아이콘 포함)
+- [ ] 차트 4개 (가로막대, 세로막대, 도넛, 곡선)
+- [ ] 테이블 표시
+- [ ] 파일 분리 완료
+- [ ] HTML 태그 없음
+
+결과 확인:
+
+- [ ] Dashboard.tsx 생성됨 (렌더링만)
+- [ ] DashboardUtil.ts 생성됨 (데이터만)
+- [ ] KPI 카드 4개 + 아이콘 표시
+- [ ] 4가지 차트 모두 표시
+- [ ] 캠페인 테이블 표시
+- [ ] Recharts 사용됨

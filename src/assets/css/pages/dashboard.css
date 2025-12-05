@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---- Pages : Dashboard : Start ---- */
+
+/* Token으로 불가능한 스타일만 */
+.dashboard-kpi-icon {
+    font-size: 24px;
+}
+
+/* Recharts 다크모드 스타일 개선 */
+.recharts-wrapper {
+    font-family: 'Pretendard Variable', 'MalgunGothic', sans-serif !important;
+}
+
+.recharts-text {
+    fill: #d1d5db !important;
+}
+
+.recharts-label {
+    fill: #d1d5db !important;
+}
+
+.recharts-legend-item-text {
+    color: #d1d5db !important;
+}
+
+/* ---- Pages : Dashboard : End ---- */
+

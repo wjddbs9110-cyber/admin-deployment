@@ -1,0 +1,81 @@
+---
+alwaysApply: true
+---
+
+# React + Ant-Design 퍼블리싱 워크플로우
+
+## 📌 핵심 원칙
+✅ **.cursor/rules/ 규칙 파악 후 모든 내용 요청 시 마다 규칙 적용**
+✅ **금지사항 자동 적용 (HTML 금지, 인라인 스타일 금지)**
+✅ **폴더 및 파일 생성 시 마다 반드시 이 구조를 참조해** [03-file-directory.mdc](03-file-directory.mdc)
+✅ **상세 구현 코드 및 사용 예시는 [04-common-structures.mdc](04-common-structures.mdc)의 "공통 구조 컴포넌트화 가이드"를 참고하세요.**
+✅ 프로젝트에서 자주 사용하는 패턴을 **재사용 가능한 컴포넌트**로 만들어 관리합니다.
+
+
+## 🚀 프로젝트 진행 순서
+1. 기획 문서 파악
+2. **.cursor/rules/ 규칙 확인 및 기억**
+3. React + Ant-Design + Vite 주요 패키지 설치
+4. 기본 구조 생성
+5. 레이아웃, 라우터, CSS Import (Layout, Router, CSS Import)
+6. 메뉴 구조 + Sidebar
+7. ComponentSamples 페이지 구성 (Ant-Design 공식 컴포넌트)
+8. ComponentSamples 페이지 (공통 구조)
+9. Dashboard 페이지
+10. 코드 검증
+
+
+## 1. 기획 문서 파악
+- 파일명에 `기획` 이라고 되어 있는 `.mdc`, `md` 문서 참고하여 프로젝트 전체적인 기획 흐름 파악.
+- **기획적인 내용만 참고하고 기억**
+
+## 2. .cursor/rules/ 규칙 확인 및 기억
+
+## 3. React + Ant-Design + Vite 주요 패키지 설치
+
+### 📦 필수 패키지 목록 (npm install 실행)
+- `Node.js` (권장: Node.js 18.x 이상, 최소: Node.js 16.x)
+- `react` (18.x) + `react-dom`
+- `antd` (5.x) - UI 컴포넌트
+- `@ant-design/icons` (5.x)
+- `typescript` (5.x)
+- `vite` (5.x) + `@vitejs/plugin-react`
+- `react-router-dom` - 라우팅
+- `recharts` - 차트 라이브러리
+
+### 🚀 설치 방법
+**권장 방법: 수동 생성 (`.cursor` 폴더 충돌 방지)**
+1. `package.json` - 프로젝트 의존성
+2. `vite.config.ts` - Vite 설정 (alias, css.devSourcemap)
+3. `tsconfig.json` - TypeScript 설정 (jsx, paths)
+4. `tsconfig.node.json` - Node.js용 TypeScript 설정
+5. `index.html` - HTML 진입점
+6. `src/main.tsx` - React 진입점 (CSS 자동 import)
+7. `src/App.tsx` - 메인 컴포넌트
+8. `src/vite-env.d.ts` - Vite 타입 정의
+
+
+
+
+## 4. 기본 구조 생성
+- **폴더 및 파일 생성 시 마다, 반드시 이 구조를 참고해야합니다. [03-file-directory.mdc](03-file-directory.mdc) 파일을 참고**
+- **상세 구현 코드 및 사용 예시는 [04-common-structures.mdc](04-common-structures.mdc)의 "공통 구조 컴포넌트화 가이드"를 참고하세요.**
+- 프로젝트에서 자주 사용하는 패턴을 **재사용 가능한 컴포넌트**로 만들어 관리합니다.
+
+### 5. 레이아웃, 라우터, CSS Import (Layout, Router, CSS Import)
+**반드시 이 문서 파악하고 실행해줘** [05-layout-router.mdc](05-layout-router.mdc)
+
+### 6. 메뉴 구조 + Sidebar
+**반드시 이 문서 파악하고 실행해줘** [06-sidebar.mdc](06-sidebar.mdc)
+
+### 7. ComponentSamples 페이지 구성 (Ant-Design 공식 컴포넌트)
+**반드시 이 문서 파악하고 실행해줘** [07-component-sample-01.mdc](07-component-sample-01.mdc)
+
+## 8. ComponentSamples 페이지 (공통 구조)
+**반드시 이 문서 파악하고 실행해줘** [08-component-sample-02.mdc](08-component-sample-02.mdc)
+
+### 9. Dashboard 페이지
+**반드시 이 문서 파악하고 실행해줘** [09-dashboard.mdc](09-dashboard.mdc)
+
+### 10. 코드 검증
+**반드시 이 문서 파악하고 실행해줘** [10-code-review.mdc](10-code-review.mdc)
