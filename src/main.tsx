@@ -8,6 +8,7 @@ import { darkTheme } from "./theme/darkTheme";
 import "./assets/fonts/PretendardVariable/fonts.css";
 
 // CSS 자동 import (변수 사용 안 함은 의도된 동작)
+// @ts-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const styles = import.meta.glob('./assets/css/**/*.css', { eager: true });
 

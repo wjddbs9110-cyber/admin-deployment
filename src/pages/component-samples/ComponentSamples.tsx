@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Space, Typography, Button, Input, Select, DatePicker, Upload, Checkbox, Radio, Switch, Modal, Alert, message, notification, Row, Col, Card, Flex } from "antd";
+import { Space, Typography, Button, Input, Select, DatePicker, Upload, Checkbox, Radio, Switch, Modal, Alert, message, notification, Row, Col, Flex } from "antd";
 import {
     SearchOutlined,
     UserOutlined,
@@ -16,7 +16,7 @@ import {
 import { CardForm, CardFilter, CardTable } from "@/components/card/CardUtil";
 import { selectOptions, checkboxOptions, radioOptions, uploadProps } from "./ComponentSamplesUtil";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 const { TextArea, Password } = Input;
 const { RangePicker } = DatePicker;
 const { Dragger } = Upload;

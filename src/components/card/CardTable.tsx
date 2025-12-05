@@ -15,12 +15,12 @@ interface CardTableProps extends BaseCardProps, Omit<TableProps<any>, "title"> {
     children?: React.ReactNode;
     filterItems?: FilterItem[];
     filterLayout?: "horizontal" | "vertical";
-    paginationAlign?: "left" | "center" | "right";
+    paginationAlign?: "start" | "center" | "end";
     showPagination?: boolean;
     emptyDescription?: string;
 }
 
-export const CardTable: React.FC<CardTableProps> = ({ title, headerRight, children, filterItems, filterLayout = "horizontal", paginationAlign = "right", showPagination = true, pagination, emptyDescription, footerLeft, footerCenter, footerRight, ...tableProps }) => {
+export const CardTable: React.FC<CardTableProps> = ({ title, headerRight, children, filterItems, filterLayout = "horizontal", paginationAlign = "end", showPagination = true, pagination, emptyDescription, footerLeft, footerCenter, footerRight, ...tableProps }) => {
     const [currentPage, setCurrentPage] = React.useState(1);
     const [pageSize, setPageSize] = React.useState(10);
 

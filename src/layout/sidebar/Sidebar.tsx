@@ -46,14 +46,14 @@ const Sidebar: React.FC = () => {
         const path = location.pathname;
         const openKeys: string[] = [];
         
-        const findOpenKeys = (items: typeof menuItems, parentKey?: string) => {
+        const findOpenKeys = (items: typeof menuItems) => {
             for (const item of items) {
                 if (item.children) {
                     const hasActiveChild = item.children.some(child => child.path === path);
                     if (hasActiveChild) {
                         openKeys.push(item.key);
                     }
-                    findOpenKeys(item.children, item.key);
+                    findOpenKeys(item.children);
                 }
             }
         };

@@ -149,7 +149,7 @@ const Dashboard: React.FC = () => {
                                     label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                                     labelLine={{ stroke: "#9ca3af" }}
                                 >
-                                    {donutChartData.map((entry, index) => (
+                                    {donutChartData.map((_, index) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                     ))}
                                 </Pie>
