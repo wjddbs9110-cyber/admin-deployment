@@ -376,7 +376,7 @@ const ComponentSamples: React.FC = () => {
                     <Flex gap={8} wrap>
                         <Dragger {...uploadProps} className="w-400">
                             <Flex vertical align="center">
-                                <InboxOutlined className="w-full" />
+                                <InboxOutlined />
                                 <Text>클릭 또는 드래그하여 파일 업로드</Text>
                             </Flex>
                         </Dragger>
